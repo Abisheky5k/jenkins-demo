@@ -2,6 +2,7 @@ pipeline {
   agent {
     docker {
       image 'centos:latest'
+      args 'mvn clean'
     }
 
   }
