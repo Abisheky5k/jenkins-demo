@@ -1,24 +1,11 @@
 pipeline {
-  agent any
-  stages {
-    stage('build') {
-      parallel {
-        stage('build') {
-          steps {
-            echo 'hello test message'
-            build 'Maven'
-          }
-        }
-
-        stage('test') {
-          steps {
-            echo 'test message'
-          }
-        }
-
-      }
+  agent {
+    docker {
+      image 'centos:3.6.3-openjdk-16'
     }
 
+  }
+  stages {
     stage('Deploy') {
       steps {
         echo 'build message '
