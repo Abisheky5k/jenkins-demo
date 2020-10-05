@@ -6,6 +6,7 @@ pipeline {
         stage('build') {
           steps {
             echo 'hello test message'
+            build 'Maven'
           }
         }
 
