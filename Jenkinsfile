@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'centos:3.6.3-openjdk-16'
+      image 'centos:latest'
     }
 
   }
