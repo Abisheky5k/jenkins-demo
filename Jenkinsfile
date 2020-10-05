@@ -6,9 +6,11 @@ pipeline {
 
   }
   stages {
-    stage('Deploy') {
+    stage('maven build') {
       steps {
-        echo 'build message '
+        sh '''sh \'mvn clean\'
+
+'''
       }
     }
 
